@@ -24,6 +24,10 @@ const routes: Routes = [
     path: 'obs',
     loadChildren: () => import('./obs/obs.module').then( m => m.ObsPageModule)
   },
+  {
+    path: 'radio',
+    loadChildren: () => import('./radio/radio.module').then( m => m.RadioPageModule)
+  },
 ];
 
 @NgModule({

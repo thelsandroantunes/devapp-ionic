@@ -23,8 +23,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () =>
-              import('../obs/obs.module').then(m => m.ObsPageModule)
+              loadChildren: () => import('../obs/obs.module').then( m => m.ObsPageModule)
           }
         ]
       },

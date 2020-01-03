@@ -1,0 +1,33 @@
+page-home {
+    .icone{
+        height: 50%;
+        width: 90%;
+        color: white
+        
+        
+    }
+    .NomeMusica{
+        height: 30%;
+        width: 90%;
+        font-size: 30px;
+        text-align: center
+    }
+    .Detalhes{
+        height: 20%;
+        width: 90%;
+        text-align: center
+
+    }
+    .logo{
+		display: grid;        
+		height: 75%;
+		margin-left:11%;		
+		width:35vh;     		
+		margin-top:2%;
+		background: url(assets/icon/logo.svg) center/cover
+}
+.barra{
+        height: 9vh;margin:-10px;
+}
+
+}

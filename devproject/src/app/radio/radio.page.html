@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton color="verde">
+   
+
+    <button ion-button menuToggle>
+   
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="barra">
+      LOGO
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div *ngIf="tocar"class="icone" style="color:white;background: url(assets/icon/botão-stop-principal.svg) center /cover"
+(click)="stop()">
+          stop
+</div>
+<div *ngIf="!tocar"class="icone" style="background: url(assets/icon/botão-play-principal.svg) center /cover"
+(click)="play()">
+          play
+</div>
+<div class="NomeMusica">
+  Opera House
+</div>
+<br>
+<div class="Detalhes">
+      detalhes da obra
+  </div>
+
+</ion-content>
