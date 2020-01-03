@@ -8,6 +8,22 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'filtro',
+    loadChildren: () => import('./filtro/filtro.module').then( m => m.FiltroPageModule)
+  },
+  {
+    path: 'obs',
+    loadChildren: () => import('./obs/obs.module').then( m => m.ObsPageModule)
+  },
 ];
 
 @NgModule({

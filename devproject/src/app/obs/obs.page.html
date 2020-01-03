@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Observações
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let nota of noteService.anotacoes" class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>{{ nota.titulo || "Sem título"}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p *ngIf="nota.anotacao">{{ nota.anotacao || "Sem anotações"}}</p>
+      <img *ngIf="nota.foto" [src]="nota.foto" alt="" />    
+    </ion-card-content>
+    <ion-chip *ngFor="let tag of nota.tags">
+      <ion-label>{{tag}}</ion-label>
+    </ion-chip>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-input [(ngModel)]="newTitulo" placeholder="Digite o Título"></ion-input>
+  </ion-toolbar>
+</ion-footer>
+<ion-footer>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="end">
+      <ion-button (click)="capturar()">
+        <ion-icon slot="icon-only" name="camera"></ion-icon>
+      </ion-button>
+      <ion-button (click)="addNota()">
+        <ion-icon slot="icon-only" name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-textarea [(ngModel)]="newNota" autoGrow="true" placeholder="Digite aqui suas observações"></ion-textarea>
+  </ion-toolbar>
+</ion-footer>
